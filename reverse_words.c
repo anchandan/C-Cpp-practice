@@ -8,8 +8,9 @@ void reverse_word(char *begin , char *end)
 	while(begin < end)
 	{
 		temp = *begin;
-		*begin++ = *end;
-		*end-- = temp;
+		*begin = *end;
+		*end = temp;
+		begin++; end--;
 	}
 }
 
