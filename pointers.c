@@ -39,10 +39,14 @@ int main()
 	printf("Address of y:%lu\n", y);
 	printf("Value y is pointing to:%d\n", *y);
 #endif
+	//int arr[5] = {1,2,3,4,5};
 
-	int arr[5] = {1,2,3,4,5};
+	int arr[3][4] = {{1,2,3,4},
+					 {1,2,3,4},
+					 {1,2,3,4}};
 
-	int *p = arr;
+	int *p = (int *)arr;
 
-	printf("second element of array: %d\n",*(2+ p) );
+	printf("0,0: %d\n",(int)(*p) );
+	printf("2,3: %d\n",(int)*(p+((2*4)+ 2)));
 }
