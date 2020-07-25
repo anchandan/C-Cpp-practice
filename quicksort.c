@@ -3,24 +3,29 @@
 
 int partition(int *arr, int start, int end)
 {
-	int pivot = arr[end];
-	int index = start;
-	int temp;
-	for (int i = start; i < end; i++)
+	int pivot = (start + end) / 2;
+
+	while(start < end)
 	{
-		if (arr[i] <= pivot) //keep elements smaller than the pivot to the left
+		while(arr[start] < pivot)
 		{
-			temp = arr[i];
-			arr[i] = arr[index];
-			arr[index] = temp;
-			index++;
+			start++;
+		}
+		while(arr[end] > pivot)
+		{
+			end--;
+		}
+		if (start <= end)
+		{
+			int temp = arr[start];
+			arr[start] = arr[end];
+			arr[end] = temp;
+			
+			end--;
+			start++;
 		}
 	}
-	//swap the pivot and current index to get proper partition
-	temp = arr[end];
-	arr[end] = arr[index];
-	arr[index] = temp;
-	return index;
+	return start;
 }
 
 void quicksort(int *arr, int start, int end)

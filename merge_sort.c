@@ -39,7 +39,6 @@ void merge(int *arr, int *temp, int start1, int mid, int start2)
 		arr[i] = temp[i];
 		//printf("%d ", arr[i]);
 	}
-	//printf("\n");
 }
 
 void merge_sort(int *arr , int *temp ,int left , int right)
@@ -68,7 +67,6 @@ void sort(int *array, int size)
 	}
 	printf("\n");
 	#endif
-	
 }
 
 int main()
