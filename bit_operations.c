@@ -29,6 +29,6 @@ int main()
 	swap(&x,&y);
 	printf("Swappped: %d  %d\n", x,y);
 
-	printf("Turning off bit 2: %d\n", invert_bit(3,0));
+	printf("Turning off bit 2: %d\n", invert_bit(3,1));
 	return 0;
 }
